@@ -4,7 +4,7 @@
 ## chatspace DB設計
 ## ################
 
-## userテーブル
+## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |email|string|null: false|
@@ -16,7 +16,7 @@
 -- has_many :chats
 
 
-## groupテーブル
+## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |group_name|string|null: false|
@@ -26,7 +26,7 @@
 -- has_many :chats
 
 
-## chatテーブル
+## chatsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |message|string|null: false|
@@ -34,8 +34,8 @@
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 ### Association
--- belongs_to :users
--- belongs_to :groups
+-- belongs_to :user
+-- belongs_to :group
 
 
 ## groups_usersテーブル
@@ -44,5 +44,5 @@
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 ### Association
-- belongs_to :group
-- belongs_to :user
+-- belongs_to :group
+-- belongs_to :user
