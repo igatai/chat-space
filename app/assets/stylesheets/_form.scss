@@ -1,0 +1,36 @@
+&__form {
+  width: calc(100vw - 300px);
+  height: 90px;
+  background-color: #d2d2d2;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__input_box {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    position: relative;
+    &__text {
+      height: 60px;
+      width: 100%;
+      margin: 20px 40px 20px 0;
+      padding: 0 40px 0 10px;
+    }
+    &__image {
+      position: absolute;
+      top: 40px;
+      right: 60px;
+      font-size: 1.3rem;
+      &__file {
+        display: none;
+      }
+    }
+  }
+  &__btn {
+    background-color: #38aef0;
+    color: white;
+    height: 40px;
+    width: 100px;
+  }
+}

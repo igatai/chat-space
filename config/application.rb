@@ -11,7 +11,8 @@ module ChatSpace
     config.generators do |g|
       g.stylesheets false
       g.javascripts false
-      g.helper falseg.test_framewark false
+      g.helper false
+      g.test_framewark false
     end
   end
 end
