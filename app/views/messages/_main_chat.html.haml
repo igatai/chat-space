@@ -13,7 +13,6 @@
         %p.chat_main__group_info__head__list__name
           tanaka
     .chat_main__group_info__tail
-      -# %p.chat_main__group_info__tail__btn
       =link_to "#", class: "chat_main__group_info__tail__btn" do
         edit
 
@@ -48,37 +47,3 @@
         =icon('fas', 'image')
         %input{type: "file", class: "chat_main__form__input_box__image__file"}
     %input{type: "submit", value: "SEND",class: "chat_main__form__btn"}
-
-    -# %label{class: "input-box__image"}
-    -#   =icon('fas', 'image')
-    -#   %input(type: "file")
-
-  -# <form>
-  -#   <input type="text" placeholder="名前を入力してください"><br>
-  -#   <textarea placeholder="予約日時やご要望をお書きください"></textarea><br>
-  -#   <input type="submit" value="予約メールを送る">
-
-
--# <%= form_with model: @post, local: true do |form| %>
--#   <%= form.text_field :content %>
--#   <%= form.submit '投稿する' %>
--# <% end %>
-
--# <%= form_with model: @post, class: :form, local: true do |form| %>
--#   <%= form.text_field :title, placeholder: :タイトル, class: :form__title %>
--#   <%= form.text_area :content, placeholder: :ブログ本文, class: :form__text %>
--#   <%= form.submit '投稿する', class: :form__btn %>
--# <% end %>
-
-
-
-
-
-        -# =link_to "#" do
-        -#   = icon('fas',' fa-edit',class: "side_bar__user__top_items__icon__edit")
-
-        <form>
-          <textarea placeholder="予約日時やご要望をお書きください"></textarea><br>
-          <label>
-          <input type="submit" value="予約メールを送る">
-        </form>
