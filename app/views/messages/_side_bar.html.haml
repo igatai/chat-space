@@ -1,0 +1,27 @@
+.side_bar
+  .side_bar__user
+    .side_bar__user__top_items
+      %p.side_bar__user__top_items__text
+        testman
+      .side_bar__user__top_items__icon
+        =link_to "#" do
+          = icon('fas',' fa-cog',class: "side_bar__user__top_items__icon__cog")
+        =link_to "#" do
+          = icon('fas',' fa-edit',class: "side_bar__user__top_items__icon__edit")
+
+  .side_bar__group
+    .side_bar__group__list
+      %p.side_bar__group__list__name
+        group1
+      %p.side_bar__group__list__content
+        まだメッセージがありません
+    .side_bar__group__list
+      %p.side_bar__group__list__name
+        group2
+      %p.side_bar__group__list__content
+        まだメッセージがありません
+    .side_bar__group__list
+      %p.side_bar__group__list__name
+        group3
+      %p.side_bar__group__list__content
+        まだメッセージがありません
