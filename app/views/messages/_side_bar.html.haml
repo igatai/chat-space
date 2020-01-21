@@ -2,9 +2,9 @@
   .side_bar__user
     .side_bar__user__top_items
       %p.side_bar__user__top_items__text
-        testman
+        = current_user.name
       .side_bar__user__top_items__icon
-        =link_to "#" do
+        =link_to edit_user_path(current_user) do
           = icon('fas',' fa-cog',class: "side_bar__user__top_items__icon__cog")
         =link_to "#" do
           = icon('fas',' fa-edit',class: "side_bar__user__top_items__icon__edit")
