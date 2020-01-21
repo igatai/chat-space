@@ -1,4 +1,7 @@
 @import "./reset.scss";
+@import "config/colors";//...added for flash
+@import "modules/flash";//...added for flash
 @import "font-awesome-sprockets";
 @import "./font-awesome";
+@import "modules/user";
 @import "./messages.scss";
