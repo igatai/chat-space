@@ -40,10 +40,20 @@
       %p.chat_main__lists__message__content
         おはよ
 
-  %form.chat_main__form
-    .chat_main__form__input_box
-      %input{type: "text", class: "chat_main__form__input_box__text" ,placeholder: "type a message"}
-      %label{class: "chat_main__form__input_box__image"}
-        =icon('fas', 'image')
-        %input{type: "file", class: "chat_main__form__input_box__image__file"}
-    %input{type: "submit", value: "SEND",class: "chat_main__form__btn"}
+    .form
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = icon('fas', 'image', class: 'icon')
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
+
+  -# %form.chat_main__form
+  -#   .chat_main__form__input_box
+  -#     %input{type: "text", class: "chat_main__form__input_box__text" ,placeholder: "type a message"}
+  -#     %label{class: "chat_main__form__input_box__image"}
+  -#       =icon('fas', 'image')
+  -#       %input{type: "file", class: "chat_main__form__input_box__image__file"}
+  -#   %input{type: "submit", value: "SEND",class: "chat_main__form__btn"}
+
