@@ -10,7 +10,7 @@
           = icon('fas',' fa-cog',class: "side_bar__user__top_items__icon__cog")
   .side_bar__group
     - current_user.groups.each do |group|
-      = link_to group_message_path(group),class: 'side_bar__group__list' do
+      = link_to group_messages_path(group),class: 'side_bar__group__list' do
         .side_bar__group__list__name
           = group.name
         .side_bar__group__list__content
