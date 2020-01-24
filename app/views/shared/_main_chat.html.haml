@@ -1,53 +1,53 @@
-.chat_main
-  .chat_main__group_info
-    .chat_main__group_info__head
-      %p.chat_main__group_info__head__title
-        group1
-      .chat_main__group_info__head__list
-        %p.chat_main__group_info__head__list__member
-          member : 
-        %p.chat_main__group_info__head__list__name
-          testman
-        %p.chat_main__group_info__head__list__name
-          A
-        %p.chat_main__group_info__head__list__name
-          tanaka
-    .chat_main__group_info__tail
-      =link_to '/groups/1/edit', class: "chat_main__group_info__tail__btn" do
-        edit
+-# .chat_main
+-#   .chat_main__group_info
+-#     .chat_main__group_info__head
+-#       %p.chat_main__group_info__head__title
+-#         group1
+-#       .chat_main__group_info__head__list
+-#         %p.chat_main__group_info__head__list__member
+-#           member : 
+-#         %p.chat_main__group_info__head__list__name
+-#           testman
+-#         %p.chat_main__group_info__head__list__name
+-#           A
+-#         %p.chat_main__group_info__head__list__name
+-#           tanaka
+-#     .chat_main__group_info__tail
+-#       =link_to '/groups/1/edit', class: "chat_main__group_info__tail__btn" do
+-#         edit
 
-  .chat_main__lists
-    .chat_main__lists__message
-      .chat_main__lists__message__info
-        %p.chat_main__lists__message__info__speaker
-          testman
-        %p.chat_main__lists__message__info__date
-          2020/1/20(月) 12:00
-      %p.chat_main__lists__message__content
-        おはよ
-      .chat_main__lists__message__info
-        %p.chat_main__lists__message__info__speaker
-          tanaka
-        %p.chat_main__lists__message__info__date
-          2020/1/20(月) 13:00
-      %p.chat_main__lists__message__content
-        おはよ
-      .chat_main__lists__message__info
-        %p.chat_main__lists__message__info__speaker
-          A
-        %p.chat_main__lists__message__info__date
-          2020/1/20(月) 13:30
-      %p.chat_main__lists__message__content
-        おはよ
+-#   .chat_main__lists
+-#     .chat_main__lists__message
+-#       .chat_main__lists__message__info
+-#         %p.chat_main__lists__message__info__speaker
+-#           testman
+-#         %p.chat_main__lists__message__info__date
+-#           2020/1/20(月) 12:00
+-#       %p.chat_main__lists__message__content
+-#         おはよ
+-#       .chat_main__lists__message__info
+-#         %p.chat_main__lists__message__info__speaker
+-#           tanaka
+-#         %p.chat_main__lists__message__info__date
+-#           2020/1/20(月) 13:00
+-#       %p.chat_main__lists__message__content
+-#         おはよ
+-#       .chat_main__lists__message__info
+-#         %p.chat_main__lists__message__info__speaker
+-#           A
+-#         %p.chat_main__lists__message__info__date
+-#           2020/1/20(月) 13:30
+-#       %p.chat_main__lists__message__content
+-#         おはよ
 
-  .form
-    = form_for [@group, @message] do |f|
-      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
-      .form__mask
-        = f.label :image, class: 'form__mask__image' do
-          = icon('fas', 'image', class: 'icon')
-          = f.file_field :image, class: 'hidden'
-      = f.submit 'Send', class: 'form__submit'
+-#   .form
+-#     = form_for [@group, @message] do |f|
+-#       = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+-#       .form__mask
+-#         = f.label :image, class: 'form__mask__image' do
+-#           = icon('fas', 'image', class: 'icon')
+-#           = f.file_field :image, class: 'hidden'
+-#       = f.submit 'Send', class: 'form__submit'
 
   -# %form.chat_main__form
   -#   .chat_main__form__input_box
