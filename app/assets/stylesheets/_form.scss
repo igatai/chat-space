@@ -3,34 +3,42 @@
   height: 90px;
   background-color: #d2d2d2;
   padding: 20px 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  &__input_box {
+  #new_message {
     width: 100%;
-    align-items: center;
+    height: 100%;
     display: flex;
+    align-items: center;
+    // position: relative;
+  }
+  &__input_box {
+    height: 100%;
+    width: 100%;
+    padding-right: 60px;
+  }
+  &__mask {
     position: relative;
-    &__text {
-      height: 60px;
-      width: 100%;
-      margin: 20px 40px 20px 0;
-      padding: 0 40px 0 10px;
-    }
     &__image {
       position: absolute;
-      top: 40px;
-      right: 60px;
-      font-size: 1.3rem;
+      // top: -20px;
+      top : -12px;
+      right: 15px;
+      font-size: 2rem;
+      &__icon {
+
+      }
+      #message_image {
+        display: none;
+      }
       &__file {
         display: none;
       }
     }
   }
-  &__btn {
+  &__submit {
     background-color: #38aef0;
     color: white;
     height: 40px;
     width: 100px;
+    // background-color: pink;
   }
 }

@@ -5,24 +5,30 @@
   background-color: #fafafa;
   padding-top: 35px;
   &__message {
-
     &__info {
       margin-bottom: 12px;
+      // display: flex;
       display: flex;
-      &__speaker {
+      &__user_name {
         color: #333333;
         font-size: 16px;
+        // display: inline-block;
       }
       &__date {
         color: #999999;
         font-size: 12px;
         padding-left: 5px;
+        // display: inline-block;
       }
     }
     &__content {
       color: #434A54;
       font-size: 14px;
       padding-bottom: 46px;
+      #lower-message__image {
+        height: 300px;
+        width: 500px;
+      }
     }
   }
 }
