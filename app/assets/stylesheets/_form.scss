@@ -8,7 +8,6 @@
     height: 100%;
     display: flex;
     align-items: center;
-    // position: relative;
   }
   &__input_box {
     height: 100%;
@@ -19,7 +18,6 @@
     position: relative;
     &__image {
       position: absolute;
-      // top: -20px;
       top : -12px;
       right: 15px;
       font-size: 2rem;
@@ -39,6 +37,5 @@
     color: white;
     height: 40px;
     width: 100px;
-    // background-color: pink;
   }
 }

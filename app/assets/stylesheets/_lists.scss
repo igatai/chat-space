@@ -7,18 +7,15 @@
   &__message {
     &__info {
       margin-bottom: 12px;
-      // display: flex;
       display: flex;
       &__user_name {
         color: #333333;
         font-size: 16px;
-        // display: inline-block;
       }
       &__date {
         color: #999999;
         font-size: 12px;
         padding-left: 5px;
-        // display: inline-block;
       }
     }
     &__content {
