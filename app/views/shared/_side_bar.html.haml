@@ -1,17 +1,17 @@
 .side_bar
   .side_bar__user
     .side_bar__user__top_items
-      %p.side_bar__user__top_items__text
+      %h3.side_bar__user__top_items__text
         = current_user.name
       .side_bar__user__top_items__icon
-        =link_to new_group_path do
-          = icon('fas',' fa-edit',class: "side_bar__user__top_items__icon__edit")
         =link_to edit_user_path(current_user) do
           = icon('fas',' fa-cog',class: "side_bar__user__top_items__icon__cog")
+        =link_to new_group_path do
+          = icon('fas',' fa-edit',class: "side_bar__user__top_items__icon__edit")
   .side_bar__group
     - current_user.groups.each do |group|
-      = link_to edit_group_path(group[ :id]),class: 'side_bar__group__list' do
+      = link_to group_messages_path(group),class: 'side_bar__group__list' do
         .side_bar__group__list__name
           = group.name
         .side_bar__group__list__content
-          メッセージはまだありません
+          = group.show_last_message

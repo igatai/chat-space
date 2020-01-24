@@ -13,7 +13,7 @@
 ### Association
 -- has_many :groups_users
 -- has_many :groups, through: :groups_users
--- has_many :chats
+-- has_many :messages
 
 
 ## groupsテーブル
@@ -23,14 +23,14 @@
 ### Association
 -- has_many :groups_users
 -- has_many :users, through: :groups_users
--- has_many :chats
+-- has_many :messages
 
 
-## chatsテーブル
+## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|message|string||
-|url|string||
+|content|string||
+|image|string||
 |user|references|null: false, foreign_key: true|
 |group|references|null: false, foreign_key: true|
 ### Association

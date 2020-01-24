@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   def edit
+
   end
   def update
     if current_user.update(user_params)
@@ -13,5 +14,9 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:name, :email)
+  end
+
+  def group_params
+    params.require(:group).permit(:id)
   end
 end
