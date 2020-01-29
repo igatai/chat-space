@@ -3,10 +3,10 @@ $(function(){
     if (message.image) {
       var html = `<div class="chat_main__lists__message message-id=${message.id}">
                     <div class="chat_main__lists__message__info">
-                      <div class="chat_main__lists__message__info_user_name">
+                      <div class="chat_main__lists__message__info__user_name">
                         ${message.user_name}
                       </div>
-                      <div class="chat_main__lists__message__info_date">
+                      <div class="chat_main__lists__message__info__date">
                         ${message.date}
                       </div>
                     </div>
@@ -21,10 +21,10 @@ $(function(){
     } else {
       var html = `<div class="chat_main__lists__message message-id=${message.id}">
                     <div class="chat_main__lists__message__info">
-                      <div class="chat_main__lists__message__info_user_name">
+                      <div class="chat_main__lists__message__info__user_name">
                         ${message.user_name}
                       </div>
-                      <div class="chat_main__lists__message__info_date">
+                      <div class="chat_main__lists__message__info__date">
                         ${message.date}
                       </div>
                     </div>
@@ -51,8 +51,6 @@ $(function(){
       var html = buildHTML(data);
       //子要素の一番最後に追加する
       $(".chat_main__lists").append(html);
-
-      // $(".chat_main__form")[0].reset();
       // scrollTop: 指定した分だけスクロールする。メッセージが入ったdiv要素のスクロール可能な高さ
       $('.chat_main__lists').animate({ scrollTop : $('.chat_main__lists')[0].scrollHeight });
       // //フォームを空にする
