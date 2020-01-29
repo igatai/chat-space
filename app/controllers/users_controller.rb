@@ -1,4 +1,13 @@
 class UsersController < ApplicationController
+
+  def index
+    respond_to do |format|
+      # API生成
+      format.html
+      format.json
+    end
+  end
+
   def edit
 
   end
