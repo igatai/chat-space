@@ -82,7 +82,7 @@ $(function(){
   })
 
   var reloadMessages = function() {
-    // メッセージの最後のhtmlのmessage-idからidを拾って、last-messageとする
+    // メッセージの最後のhtmlのmessage-idからidを拾って、last_message_idにいれる
     last_message_id = $('.chat_main__lists__message:last').data("message-id");
     $.ajax({
       // ルーティング設定通り、[/groups/id/]api/messagesとする
