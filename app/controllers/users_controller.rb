@@ -7,12 +7,13 @@ class UsersController < ApplicationController
     # モデル.where('カラム名 LIKE(?)',"%{:keyword}%")... :keywordを含み、自分自身を除くユーザー10件
     # @users = User.where('text LIKE(?)',"%{params[:keyword]}%").where.not(id: current_user.id).limit(10)
     # @users = User.search(params[:keyword], current_user.id)
+
     @users = User.search(params[:keyword], current_user.id)
-    
+    # binding.pry
     # API生成
     respond_to do |format|
-      format.json
       format.html
+      format.json
     end
   end
 
