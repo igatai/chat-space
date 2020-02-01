@@ -21,7 +21,6 @@ $(function(){
   }
 
   function addDeleteUser(name, id){
-    console.log("bbb")
     let html = `
     <div class="chat-group-user clearfix" id="${id}">
       <p class="chat-group-user__name">${name}</p>
@@ -33,10 +32,7 @@ $(function(){
   // メンバーの追加
   function addMember(user_id){
     let html = `<input value="${user_id}" name="group[user_ids][]" type="hidden" id="group_user_ids_${user_id}" />`;
-    // let html = `<input value="${attr.user_id}" name="attr.group[user_ids][]" type="hidden" attr.id="group_user_ids_${attr.user_id}" />`;
-    // $(`#${user_id}`).append(html);
     $(`#${user_id}`).append(html);
-    // console.log("aaaa");
   }
 
   $("#user-search-field").on("keyup", function() {
@@ -48,11 +44,9 @@ $(function(){
       dataType: 'json'
     })
     .done(function(users) {
-      // console.log(users);
       $("#user-search-result").empty();
       if (users.length !== 0 ){
         users.forEach(function(user){
-          // console.log(user);
           addUser(user);
         });
       } else if (input.length == 0 ){
@@ -70,8 +64,6 @@ $(function(){
     console.log("AAA");
     const user_id = $(this).attr("data-user-id");
     const user_name = $(this).attr("data-user-name");
-    // console.log(user_id);
-    // console.log(user_name);
     $(this)
       .parent()
       .remove();
