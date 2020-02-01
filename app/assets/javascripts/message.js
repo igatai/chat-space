@@ -13,10 +13,8 @@ $(function(){
                       </div>
                     </div>
                     <div class="chat_main__lists__message__content">
-                      ${message.content}
-                      <div>
-                        <img src=${message.image} >
-                      </div>
+                      <p>${message.content}</p>
+                      <img src="${message.image}" class="lower-message__image" />
                     </div>
                   </div>`
       return html;
@@ -31,7 +29,7 @@ $(function(){
                       </div>
                     </div>
                     <div class="chat_main__lists__message__content">
-                      ${message.content}
+                      <p>${message.content}</p>
                     </div>
                   </div>`
       return html;
@@ -46,7 +44,8 @@ $(function(){
                       </div>
                     </div>
                     <div class="chat_main__lists__message__content">
-                      ${message.image}
+                      <p>${message.content}</p>
+                      <img src="${message.image}" class="lower-message__image" />
                     </div>
                   </div>`
       return html;
