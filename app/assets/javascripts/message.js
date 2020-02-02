@@ -1,7 +1,7 @@
 $(function(){
 
   function buildHTML(message){
-    console.log(message);
+    // console.log(message);
     if (message.content && message.image) {
       var html = `<div class="chat_main__lists__message" data-message-id="${message.id}">
                     <div class="chat_main__lists__message__info">
